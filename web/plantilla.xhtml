@@ -11,14 +11,23 @@
         <h:outputStylesheet library="css" name="cssLayout.css"/>
 
 
-        <title>Facelets Template</title>
+        <title>Tienda de informática</title>
+        <link rel="icon" type="image/png" href="resources/images/logo.png"/> 
     </h:head>
 
     <h:body>
 
         <div id="top">
             <ui:insert name="top"> </ui:insert>
-            <h1>Tienda de informática</h1>
+            
+            <div id="tituloPrincipal">
+                <img id="logotipo" src="resources/images/logo.png" width="35" height="35"
+                     alt="Haz clic aquí para volver a la página de inicio"></img>
+            
+            
+            
+            <h1 >Tienda de informática</h1>
+             </div>
             <div id="menuPrincipal">
                 <h:form>  
 
@@ -44,6 +53,7 @@
 
         <div id="bottom">
             <ui:insert name="bottom"> </ui:insert>
+            Ejercicio Feddback: Yolanda Soberón Munduate, JSF y PrimeFaces
         </div>
 
     </h:body>

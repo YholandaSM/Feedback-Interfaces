@@ -14,7 +14,7 @@ h1 {
     margin: 0px;
     padding: 0px;
     color: black;
-    text-align: center;
+   
 }
 
 h2 {
@@ -41,3 +41,8 @@ a:link:hover, a:visited:hover  {
 }
 
 
+selectOneMenu{
+    
+    
+    size: 12px;
+}

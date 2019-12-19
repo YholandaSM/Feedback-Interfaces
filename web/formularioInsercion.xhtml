@@ -17,71 +17,80 @@
         <ui:composition template="./plantilla.xhtml">
 
             <ui:define name="content">
-                <h2>Insertar producto</h2>
+                 
                 <f:view> 
-                    <h:form >    
+                    <h:form>    
+                        <p:panel header="Insertar producto" style="width: 900px; margin: 0  auto; text-align:center">
+                            <p:layout id="capaInserDatosProducto" style="width: 100%; height:250px">
+                                <p:layoutUnit id="datos" position="center" style="padding: 5px; 
+                                              text-align:justify; font-size: 12px;" size="300">
+                                    <h:panelGrid id="datosGrid" columns="6" style="margin-bottom:20px" cellpadding="5">
+                                        <p:outputLabel value="Nombre" style="font-weight: bold;"/> 
 
-                        <h:panelGrid columns="6" style="margin-bottom:20px" cellpadding="5">
-                            <h3>Nombre:</h3>
-                            <span class="ui-float-label">
-                                <p:inputText id="float-input" value="#{basicView.text}" />
-
-                            </span>
-
-                            <h3>Categoría</h3>
-                            <p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:225px">
-                                <f:selectItem itemLabel="Seleccione una opción" itemValue="" />
-                                <f:selectItem itemLabel="Portatiles" itemValue="Xbox One" />
-                                <f:selectItem itemLabel="Tablest" itemValue="PS4" />
-                                <f:selectItem itemLabel="Pc's" itemValue="Wii U" />
-                                <f:facet name="footer">
-                                    <p:separator />
-                                    <h:outputText value="3 consoles" style="font-weight:bold;"/>
-                                </f:facet>
-                            </p:selectOneMenu>
-                            <h3>Descripción</h3>
-                            <p:inputText id="float-input1" value="#{basicView.text}" />
-
-                            <h3>Precio de compra</h3>
-                            <span class="ui-float-label">
-                                <p:inputText id="float-input3" value="#{basicView.text}" />
-
-                            </span>
-
-                            <h3>Fecha adquisición</h3>
-
-                            <p:calendar id="effect" value="#{calendarView.date8}" effect="fold" />
-                            <h3>IVA</h3>
-                            <p:selectOneMenu id="iva" value="#{selectOneMenuView.iva}" style="width:225px">
-                                <f:selectItem itemLabel="Seleccione una opción" itemValue="" />
-                                <f:selectItem itemLabel="8%" itemValue="Xbox One" />
-                                <f:selectItem itemLabel="10%" itemValue="PS4" />
-                                <f:selectItem itemLabel="21%" itemValue="Wii U" />
-                                <f:facet name="footer">
-                                    <p:separator />
-                                    <h:outputText value="3 consoles" style="font-weight:bold;"/>
-                                </f:facet>
-                            </p:selectOneMenu>
-
-                            <h3>Código del proveedor</h3>
-                            <p:inputText id="float-input4" value="#{basicView.text}" />
-                            <h3>Unidades disponibles</h3>
-                            <p:inputText id="float-input5" value="#{basicView.text}" />
-                        </h:panelGrid>
+                                        <p:inputText  id="float-input"  />
 
 
 
-                        <p:commandButton value="Guardar"   onclick="PF('wdialog').show();"  id="guardar" action="#{buttonView.buttonAction}"   style="margin-right:20px;" icon="pi pi-save" >
+                                        <p:outputLabel value="Categoría" style="font-weight: bold;"/> 
+                                        <p:selectOneMenu  value="#{selectOneMenuView.console}" style="width:200px">
+                                            <f:selectItem itemLabel="Seleccione una opción" itemValue="" />
+                                            <f:selectItem itemLabel="Portatiles" itemValue="Xbox One" />
+                                            <f:selectItem itemLabel="Tablest" itemValue="PS4" />
+                                            <f:selectItem itemLabel="Pc's" itemValue="Wii U" />
+                                            <f:facet name="footer">
+                                                <p:separator />
+                                                <h:outputText value="3 consoles" style="font-weight:bold;"/>
+                                            </f:facet>
+                                        </p:selectOneMenu>
+                                        <p:outputLabel value="Descripción" style="font-weight: bold;"/> 
+                                        <p:inputText id="float-input1" value="#{basicView.text}" />
 
-                            <p:confirm header="Confirmación" message="¿Está seguro?" icon="ui-icon-alert"/>
-                        </p:commandButton>
-                        <p:commandButton value="Cancelar" id="cancelar" action="#{buttonView.buttonAction}"   style="margin-right:20px;" icon="pi pi-save" />
+                                        <p:outputLabel value="Precio de compra" style="font-weight: bold;"/> 
+                                        
+                                            <p:inputText id="float-input3" value="#{basicView.text}" />
 
-                        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-                            <p:commandButton value="yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
-                            <p:commandButton value="no" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/> 
+                                            
 
-                        </p:confirmDialog>
+                                        <p:outputLabel value="Fecha de adquisición" style="font-weight: bold;"/> 
+
+                                        <p:calendar id="effect" value="#{calendarView.date8}" effect="fold" />
+                                        <p:outputLabel value="IVA" style="font-weight: bold;"/> 
+                                        <p:selectOneMenu id="iva" value="#{selectOneMenuView.iva}" style="width:225px">
+                                            <f:selectItem itemLabel="Seleccione una opción" itemValue="" />
+                                            <f:selectItem itemLabel="8%" itemValue="Xbox One" />
+                                            <f:selectItem itemLabel="10%" itemValue="PS4" />
+                                            <f:selectItem itemLabel="21%" itemValue="Wii U" />
+                                            <f:facet name="footer">
+                                                <p:separator />
+                                                <h:outputText value="3 consoles" style="font-weight:bold;"/>
+                                            </f:facet>
+                                        </p:selectOneMenu>
+
+                                        <p:outputLabel value="Código de proveedor" style="font-weight: bold;"/> 
+                                        <p:inputText id="float-input4" value="#{basicView.text}" />
+                                        <p:outputLabel value="Unidades disponibles" style="font-weight: bold;"/> 
+                                        <p:inputText id="float-input5" value="#{basicView.text}" />
+
+                                    </h:panelGrid>
+
+                                    <p:commandButton value="Guardar"   onclick="PF('wdialog').show();"  id="guardar" action="#{buttonView.buttonAction}"   style="margin-right:20px;" icon="pi pi-save" >
+
+                                        <p:confirm header="Confirmación" message="¿Está seguro ?" icon="ui-icon-alert"/>
+                                    </p:commandButton>
+                                    <p:commandButton value="Cancelar" id="cancelar" action="#{buttonView.buttonAction}"   style="margin-right:20px;" icon="pi pi-save" />
+
+                                    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                                        <p:commandButton value="yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+                                        <p:commandButton value="no" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/> 
+
+                                    </p:confirmDialog>
+
+                                </p:layoutUnit>
+
+                            </p:layout>
+
+                        </p:panel>
+
 
                     </h:form>
 
