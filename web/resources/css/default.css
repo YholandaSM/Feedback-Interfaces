@@ -46,3 +46,23 @@ selectOneMenu{
     
     size: 12px;
 }
+/***formularioInsercion***/
+form{
+    
+ 
+    
+}
+
+/* all */
+::-webkit-input-placeholder {    size: 4px;}
+::-moz-placeholder {   size: 8px; } /* firefox 19+ */
+:-ms-input-placeholder {    size: 4px; } /* ie */
+ 
+
+:focus::-webkit-input-placeholder{color:transparent;}
+ 
+
+ 
+/* individual: webkit */
+
+ 

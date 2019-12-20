@@ -25,4 +25,7 @@
 	<param-name>primefaces.THEME</param-name>
 	<param-value>pepper-grinder</param-value>
 </context-param>
+
+ 
+
 </web-app>
